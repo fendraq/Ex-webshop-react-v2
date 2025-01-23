@@ -2,7 +2,8 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
@@ -39,4 +40,34 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.itemList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.itemCard {
+  padding: 3%;
+  /* Anpassa så att rutorna håller sin storlek åt alla håll */
+}
+
+.cardImage {
+  max-width: 250px;
+  max-height: 250px;
+  /* Centrera bilden */
+}
+
+.itemCardBottom {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.basket {
+  background-color: #686868;
+  min-width: 250px;
+  max-height: 80vh;
+  padding: 1%;
+  position: sticky;
+  top: 0;
 }
