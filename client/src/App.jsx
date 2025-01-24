@@ -1,7 +1,8 @@
 import { useState } from 'react'
 // importera data
-import data from "../public/data.jsx"
+import data from "../public/data.js"
 import './App.css'
+import ItemCard from "./components/ItemCard.jsx"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,19 +14,16 @@ function App() {
       </header>
       <main>
         <div className="itemList">
-          {/* Lyfta ut detta till egen fil för hantering av lägg till kundkorgen */}
           {data.map((item, index) => (
             <div className="itemCard" key={index}>
-              <h2>{item.name}</h2>
-              <img className="cardImage" src={item.image} />
-              <div className="itemCardBottom">
-              <h4>{item.price}</h4>
-              <button>Buy</button>
-              </div>
+              <ItemCard key={item.id} item={item} />
             </div>))}
         </div>
         <aside className="basket">
           <h2>Basket</h2>
+          <ul>
+            
+          </ul>
         </aside>
       </main>
       <footer>
